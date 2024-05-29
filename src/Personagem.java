@@ -63,6 +63,6 @@ public abstract class Personagem {
     }
 
     private boolean estaMorto() {
-        return this.saude <= 0;
+        return this.saude <= 1;
     }
 }
