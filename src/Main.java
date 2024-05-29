@@ -1,18 +1,24 @@
 import java.util.Scanner;
 
+/**
+ * Classe principal que lê os dados dos personagens e executa os ataques.
+ */
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Arma arma;
         Personagem[] personagens = new Personagem[2];
 
+        // primeiro lemos os dois personagens a serem criados
         for (int i = 0; i < 2; i++) {
+            // atributos
             int pTipo = scanner.nextInt();
             double pVida = scanner.nextDouble();
             double pForca = scanner.nextDouble();
             double pDestreza = scanner.nextDouble();
             int pArma = scanner.nextInt();
 
+            // criação do personagem e da arma
             if (pTipo == 1) {
                 if (pArma == 1) {
                     arma = new Transmutacao();
@@ -40,6 +46,7 @@ public class Main {
             }
         }
 
+        // depois disso lemos os ataques, e paramos quando tiver só 0 na entrada
         while (true) {
             int atacante = scanner.nextInt();
 
