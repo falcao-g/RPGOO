@@ -17,6 +17,9 @@ O sistema deve permitir que dois personagens se ataquem, caso o atacante tenha f
 
 O esquema de classes inclui classes abstratas, concretas, herança e deve ser implementado de acordo com o seguinte diagrama UML:
 
+<img width="727" alt="uml" src="https://github.com/falcao-g/RPGOO/assets/60127788/8f71a50d-3c62-453b-b854-e28ce3453a5b">
+
+
 ## 🚀 Funcionalidades
 
 Inicialmente são disponíveis 3 classes e 2 armas para cada classe, o Mago pode escolher entre a Psi-kappa e a Magia da Transmutação, o Paladino pode usar ou a Espada ou a Lança e o Clérigo tem o Martelo e a Maça como opções.
