@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Arma arma;
         Personagem[] personagens = new Personagem[2];
 
         // primeiro lemos os dois personagens a serem criados
@@ -20,6 +19,7 @@ public class Main {
 
             // criação do personagem e da arma
             if (pTipo == 1) {
+                ArmaMago arma;
                 if (pArma == 1) {
                     arma = new Transmutacao();
                 } else {
@@ -28,6 +28,7 @@ public class Main {
 
                 personagens[i] = new Mago(pVida, pForca, pDestreza, arma);
             } else if (pTipo == 2) {
+                ArmaPaladino arma;
                 if (pArma == 1) {
                     arma = new Espada();
                 } else {
@@ -36,6 +37,7 @@ public class Main {
 
                 personagens[i] = new Paladino(pVida, pForca, pDestreza, arma);
             } else {
+                ArmaClerigo arma;
                 if (pArma == 1) {
                     arma = new Martelo();
                 } else {

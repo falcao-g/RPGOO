@@ -10,7 +10,7 @@ public class Clerigo extends Personagem {
      * @param destreza destreza do Clérigo.
      * @param arma     arma do Clérigo.
      */
-    public Clerigo(double saude, double forca, double destreza, Arma arma) {
+    public Clerigo(double saude, double forca, double destreza, ArmaClerigo arma) {
         super("Clérigo", saude, forca, destreza, arma);
     }
 }

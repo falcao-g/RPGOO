@@ -10,7 +10,7 @@ public class Paladino extends Personagem {
      * @param destreza destreza do Paladino.
      * @param arma     arma do Paladino.
      */
-    public Paladino(double saude, double forca, double destreza, Arma arma) {
+    public Paladino(double saude, double forca, double destreza, ArmaPaladino arma) {
         super("Paladino", saude, forca, destreza, arma);
     }
 }

@@ -10,7 +10,7 @@ public class Mago extends Personagem {
      * @param destreza destreza do Mago.
      * @param arma     arma do Mago.
      */
-    public Mago(double saude, double forca, double destreza, Arma arma) {
+    public Mago(double saude, double forca, double destreza, ArmaMago arma) {
         super("Mago", saude, forca, destreza, arma);
     }
 }
