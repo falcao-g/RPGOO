@@ -11,9 +11,7 @@
 
 ## 📚 Descrição
 
-O objetivo deste trabalho é implementar em linguagem de programação Java um sistema de combates de um jogo de RPG. Para isso, deve ser implementado a possibilidade de escolha entre três personagens principais, cada um possuindo armas e habilidades únicas.
-
-Cada personagem possui uma classe (Mago, Paladino e Clérigo), pontos de vida, força, destreza e pode escolher entre duas armas. Cada arma possui um modificador de dano.
+O objetivo deste trabalho é implementar em linguagem de programação Java um sistema de combates de um jogo de RPG. Cada personagem possui uma classe (Mago, Paladino e Clérigo), pontos de vida, força, destreza e pode escolher entre duas armas. Cada arma possui um modificador de dano.
 
 O sistema deve permitir que dois personagens se ataquem, caso o atacante tenha força e destreza maiores que o inimigo, o ataque é bem sucedido e o inimigo perde pontos de vida (calculados usando a força do atacante e o modificador de dano da arma). Se a força ou destreza do atacante for menor que a do inimigo, o ataque é mal sucedido e revidado. Caso contrário, o ataque é defendido e ninguém perde vida.
 
@@ -23,7 +21,7 @@ O esquema de classes inclui classes abstratas, concretas, herança e deve ser im
 
 Inicialmente são disponíveis 3 classes e 2 armas para cada classe, o Mago pode escolher entre a Psi-kappa e a Magia da Transmutação, o Paladino pode usar ou a Espada ou a Lança e o Clérigo tem o Martelo e a Maça como opções.
 
-O programa deve receber como entrada as informações necessárias para criar dois personagens com seus pontos de saúde, força, destreza e arma carregada
+O programa deve receber como entrada as informações necessárias para criar dois personagens com seus pontos de saúde, força, destreza e arma carregada.
 
 Por exemplo, para criar dois personagens:
 
@@ -49,6 +47,15 @@ número do personagem defensor. Por exemplo, para informar o ataque do Clérigo 
 
 ```
 1 2
+```
+
+E seria impresso:
+
+```
+O Clérigo ataca o Mago com Martelo.
+O ataque foi inefetivo e revidado com 1.3 pontos de dano!
+Clérigo [Saude: 8.7, Forca: 6.0, Destreza: 4.0, Martelo]
+Mago [Saude: 10.0, Forca: 5.0, Destreza: 6.0, Magia da transmutação]
 ```
 
 Para informar o fim da batalha, a entrada deve ser informada com o número zero:
