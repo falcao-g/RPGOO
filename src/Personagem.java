@@ -25,6 +25,20 @@ public abstract class Personagem {
         this.forca = forca;
         this.destreza = destreza;
         this.arma = arma;
+
+        if (this.saude < 0) {
+            this.saude = 0;
+        } else if (this.saude > 10) {
+            this.saude = 10;
+        } else if (this.forca < 0) {
+            this.forca = 0;
+        } else if (this.forca > 10) {
+            this.forca = 10;
+        } else if (this.destreza < 0) {
+            this.destreza = 0;
+        } else if (this.destreza > 10) {
+            this.destreza = 10;
+        }
     }
 
     /**
