@@ -52,19 +52,20 @@ public abstract class Personagem {
                     this.destreza, this.arma.getNome());
             return;
         }
-        System.out.printf(this.nomeTipo + " [Morreu, Forca: %.1f, Destreza: %.1f, %s]\n", this.forca,
+        System.out.printf(this.nomeTipo + " [Morto, Forca: %.1f, Destreza: %.1f, %s]\n", this.forca,
                 this.destreza, this.arma.getNome());
     }
 
     /**
      * Método que faz o personagem atacar outro personagem.
      * 
-     * A efetividade do ataque é calculada com base na força e destreza do atacante
-     * e do defensor. Se o atacante tiver força e destreza maiores que o defensor, o
-     * ataque é efetivo e o defensor recebe dano.
-     * Se o atacante tiver força e destreza menores que o defensor, o ataque é
+     * A efetividade do ataque é calculada com base destreza do atacante e do
+     * defensor.
+     * Se o atacante tiver destreza maior que o defensor, o ataque é efetivo
+     * e o defensor recebe dano.
+     * Se o atacante tiver destreza menor que o defensor, o ataque é
      * inefetivo e o atacante recebe dano.
-     * Se a força ou destreza forem iguais, o ataque é defendido e ninguém se
+     * Se as destrezas forem iguais, o ataque é defendido e ninguém se
      * machuca.
      * 
      * @param alvo personagem que será atacado.
@@ -81,16 +82,16 @@ public abstract class Personagem {
             return;
         }
 
-        if (this.forca > alvo.forca && this.destreza > alvo.destreza) {
+        if (this.destreza > alvo.destreza) {
             double dano = this.calculaDano();
             System.out.printf("O ataque foi efetivo com %.1f pontos de dano!\n", dano);
             alvo.recebeDano(dano);
-        } else if (this.forca < alvo.forca || this.destreza < alvo.destreza) {
+        } else if (this.destreza < alvo.destreza) {
             double dano = alvo.calculaDano();
             System.out.printf("O ataque foi inefetivo e revidado com %.1f pontos de dano!\n", dano);
             this.recebeDano(dano);
         } else {
-            System.out.println("O ataque foi defendido, ninguém se machucou!");
+            System.out.println("O ataque foi defendido, ninguem se machucou!");
         }
 
     }
